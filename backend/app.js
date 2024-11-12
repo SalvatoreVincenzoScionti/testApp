@@ -32,6 +32,6 @@ main().catch((error) => {
 
 async function main() {
   const connectionString = process.env.DB_CONNECT_STRING;
-  await mongoose.connect(connectionString);
+  await mongoose.connect(connectionString, { family: 4 });
   mongoose.set("strictQuery", true);
 }

@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeaderbarComponent } from './headerBar/headerbar.component';
-import { FooterbarComponent } from './footerBar/footerbar.component';
+import { HeaderbarComponent } from './components/headerBar/headerbar.component';
+import { BaseComponent } from './components/base/base.component';
+import { FooterbarComponent } from './components/footerBar/footerbar.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, HeaderbarComponent, FooterbarComponent],
+  imports: [
+    RouterModule,
+    HeaderbarComponent,
+    BaseComponent,
+    FooterbarComponent,
+  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
